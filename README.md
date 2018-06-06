@@ -3,20 +3,30 @@
 
 <img src="https://yun.dui88.com/tuia/test/luckydog.jpeg" alt="" width="400">
 
-**Library of react components for Professional Services projects**
+**Library of React Components for rofessional Services Projects**
 </div> 
 
 ## Usage
 
-* Getting Started: install and run start then open your browser and visit http://localhost:3000
+* Getting started
 
-## PeerDependencies
+  * Install packages
+  ```
+  $ npm install
+  ```
+  * Start project
+  ```
+  $ npm run start
+  ```
+  * Visit `http://localhost:3000` in you browser
 
-* react more than 16.0.0
+## Peer Dependencies
+
+* React >= 16.0.0
 
 ## Contributing
 
-We welcome all contributions. Please read our CONTRIBUTING.md first. You can submit any ideas as pull requests or as GitHub issues. If you'd like to improve code, check out the Development Instructions and have a good time! :)
+We welcome all contributions. Please read our [CONTRIBUTING.md](https://github.com/dreamtian/library-react/blob/master/CONTRIBUTING.md) first. You can submit any ideas as pull requests or as GitHub issues. If you'd like to improve code, check out the Development Instructions and have a good time! :)
 
 ## TODO
 
