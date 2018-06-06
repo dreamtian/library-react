@@ -18,7 +18,7 @@
   ```
   $ npm run start
   ```
-  * Visit `http://localhost:3000` in you browser
+  * Visit `http://localhost:3000` in your browser
 
 ## Peer Dependencies
 
