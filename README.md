@@ -20,5 +20,6 @@ We welcome all contributions. Please read our CONTRIBUTING.md first. You can sub
 
 ## TODO
 
-* add unit testing (@sosohime)
+* add unit testing ([@sosohime](https://github.com/sosohime))
 * add theme to facilitate the application of various styles (use for reference ant-design or element-ui)
+
