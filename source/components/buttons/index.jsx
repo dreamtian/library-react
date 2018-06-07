@@ -26,7 +26,7 @@ export default class Button extends React.Component {
   render () {
     const {text} = this.props
     return (
-      <div className='test' onClick= {this.handleClick}>{text}</div>
+      <div className='test' onClick={this.handleClick}>{text}</div>
     )
   }
 }
