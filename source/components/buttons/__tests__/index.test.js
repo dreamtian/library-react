@@ -1,5 +1,5 @@
 
-import React , { Component }from 'react';
+import { Component } from 'react';
 import { render, mount, shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Button from '../index';
