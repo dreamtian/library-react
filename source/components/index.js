@@ -1,1 +1,1 @@
-export {default as button} from './buttons'
+export {default as Button} from './buttons'
