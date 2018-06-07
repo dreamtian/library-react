@@ -4,6 +4,8 @@
 <img src="https://yun.dui88.com/tuia/test/luckydog.jpeg" alt="" width="400">
 
 **Library of React Components for rofessional Services Projects**
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 </div> 
 
 ## Usage
