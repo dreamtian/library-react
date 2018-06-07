@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './index.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import './index.css'
 
 export default class Button extends React.Component {
   static defaultProps = {
@@ -13,20 +13,20 @@ export default class Button extends React.Component {
     size: PropTypes.oneOf(['common', 'small', 'large']),
     text: PropTypes.string
   }
-  constructor(props) {
-    super(props);
-    this.state = {};
+  constructor (props) {
+    super(props)
+    this.state = {}
   }
   handleClick = () => {
-    const {onClick} = this.props;
+    const {onClick} = this.props
     if (onClick) {
-      onClick();
+      onClick()
     }
   }
-  render() {
-    const {text} = this.props;
+  render () {
+    const {text} = this.props
     return (
       <div className='test' onClick = {this.handleClick}>{text}</div>
-    );
+    )
   }
 }
