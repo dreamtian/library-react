@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "styleguidist server",
-    "test": "mocha source/**/**/__tests__/*.js"
+    "test": "jest --no-cache --config .jest.js"
   },
   "author": "tuia-FED",
   "license": "MIT",
   "dependencies": {
     "babel-eslint": "^8.2.3",
+    "classnames": "^2.2.5",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
@@ -21,8 +22,12 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "babel-register": "^6.9.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.9.1",
+    "jest": "^23.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-styleguidist": "^6.2.6",

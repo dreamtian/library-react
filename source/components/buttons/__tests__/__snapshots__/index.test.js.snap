@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<button
+  class="test-btn"
+  type="common"
+/>
+`;
+
+exports[`Button should response click event to change text 1`] = `
+<DefaultButton>
+  <Button
+    disabled={false}
+    nbButton={false}
+    onClick={[Function]}
+    prefixCls="test-btn"
+    size="common"
+    type="common"
+  >
+    <button
+      className="test-btn"
+      disabled={false}
+      onClick={[Function]}
+      size="common"
+      type="common"
+    >
+      <span
+        key=".0"
+      >
+        changed
+      </span>
+    </button>
+  </Button>
+</DefaultButton>
+`;
