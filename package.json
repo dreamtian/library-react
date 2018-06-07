@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "styleguidist server",
-    "test": "jest --no-cache --config .jest.js"
+    "test": "jest --no-cache --config .jest.js",
     "lint": "standard"
   },
   "author": "tuia-FED",
   "license": "MIT",
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "babel-eslint",
+    "ignore": [
+      "__tests__"
+    ]
   },
   "husky": {
     "hooks": {
