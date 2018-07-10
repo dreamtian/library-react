@@ -62,13 +62,6 @@ export type NativeButtonProps = {
 export type ButtonProps = NativeButtonProps;
 
 export default class Button extends React.Component<ButtonProps, any> {
-  static defaultProps = {
-    prefixCls: 'test-btn',
-    nbButton: false,
-    disabled: false,
-    type: 'common',
-    size: 'common'
-  }
   static propTypes = {
     type: PropTypes.oneOf(['common', 'uncommon']),
     size: PropTypes.oneOf(['common', 'small', 'large']),
@@ -76,6 +69,14 @@ export default class Button extends React.Component<ButtonProps, any> {
     onClick: PropTypes.func,
     loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
     icon: PropTypes.string,
+  }
+
+  static defaultProps = {
+    prefixCls: 'test-btn',
+    nbButton: false,
+    disabled: false,
+    type: 'common',
+    size: 'common'
   }
 
   timeout: number;

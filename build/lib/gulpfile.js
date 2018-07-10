@@ -208,3 +208,5 @@ gulp.task('compile-with-es', () => {
 gulp.task('pub', ['compile'], (done) => {
   pub(done);
 });
+
+gulp.task('pub-build', ['compile', 'dist'])

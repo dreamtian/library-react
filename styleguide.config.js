@@ -32,7 +32,8 @@ module.exports = {
       components: () => ([
         // add the component like this
         // it can read the md file and generate the corresponding document on the website
-        path.resolve(__dirname, 'source/components/buttons', 'index.jsx')
+        path.resolve(__dirname, 'source/components/buttons', 'index.jsx'),
+        path.resolve(__dirname, 'source/components/testc', 'index.tsx')
       ])
     },
     {
@@ -67,6 +68,21 @@ module.exports = {
           test: /\.jsx?$/,
           exclude: /node_modules/,
           loader: 'babel-loader'
+        },
+        {
+          test: /\.tsx?$/,
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: 'babel-loader'
+            },
+            {
+              loader: 'ts-loader',
+              options: {
+                transpileOnly: true
+              }
+            }
+          ]
         },
         {
           test: /\.css$/,

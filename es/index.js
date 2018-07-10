@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _buttons = require('./buttons');
 
-Object.defineProperty(exports, 'button', {
+Object.defineProperty(exports, 'Button', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_buttons)['default'];
@@ -15,7 +15,7 @@ Object.defineProperty(exports, 'button', {
 
 var _testc = require('./testc');
 
-Object.defineProperty(exports, 'testc', {
+Object.defineProperty(exports, 'Testc', {
   enumerable: true,
   get: function get() {
     return _interopRequireDefault(_testc)['default'];
