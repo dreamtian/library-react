@@ -20,7 +20,7 @@ module.exports = {
     return 'import ' + componentName + ' from \'tuia/' + name + '\''
   },
   styleguideComponents: {
-    Logo: path.join(__dirname, 'lib/components/logo')
+    // Logo: path.join(__dirname, 'lib/components/logo')
   },
   sections: [
     {

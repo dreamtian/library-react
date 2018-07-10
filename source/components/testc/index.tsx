@@ -4,12 +4,12 @@ import classNames from 'classnames'
 
 const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/
 const isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar)
-function isString (str) {
+function isString (str : any) {
   return typeof str === 'string'
 }
 
 // Insert one space between two chinese characters automatically.
-function insertSpace (child, needInserted) {
+function insertSpace (child : any, needInserted : any) {
   // Check the child if is undefined or null.
   if (child == null) {
     return
@@ -30,7 +30,38 @@ function insertSpace (child, needInserted) {
   return child
 }
 
-export default class Button extends React.Component {
+export type ButtonType = 'default' | 'primary' | 'ghost' | 'dashed' | 'danger';
+export type ButtonShape = 'circle' | 'circle-outline';
+export type ButtonSize = 'small' | 'default' | 'large';
+export type ButtonHTMLType = 'submit' | 'button' | 'reset';
+
+export interface BaseButtonProps {
+  type?: ButtonType;
+  icon?: string;
+  shape?: ButtonShape;
+  size?: ButtonSize;
+  loading?: boolean | { delay?: number };
+  prefixCls?: string;
+  className?: string;
+  ghost?: boolean;
+  text?: string;
+  nbButton?: any;
+}
+
+export type AnchorButtonProps = {
+  href: string;
+  target?: string;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
+} & BaseButtonProps & React.AnchorHTMLAttributes<HTMLAnchorElement>;
+
+export type NativeButtonProps = {
+  htmlType?: ButtonHTMLType;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+} & BaseButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+export type ButtonProps = NativeButtonProps;
+
+export default class Button extends React.Component<ButtonProps, any> {
   static defaultProps = {
     prefixCls: 'test-btn',
     nbButton: false,
@@ -41,15 +72,21 @@ export default class Button extends React.Component {
   static propTypes = {
     type: PropTypes.oneOf(['common', 'uncommon']),
     size: PropTypes.oneOf(['common', 'small', 'large']),
-    className: PropTypes.string
+    className: PropTypes.string,
+    onClick: PropTypes.func,
+    loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
+    icon: PropTypes.string,
   }
-  constructor (props) {
+
+  timeout: number;
+
+  constructor (props : ButtonProps) {
     super(props)
     this.state = {
       clicked: false
     }
   }
-  handleClick = (e) => {
+  handleClick: React.MouseEventHandler<HTMLButtonElement> = e => {
     // Add click effect
     this.setState({ clicked: true })
     clearTimeout(this.timeout)
@@ -57,7 +94,7 @@ export default class Button extends React.Component {
 
     const { onClick } = this.props
     if (onClick) {
-      onClick(e)
+      (onClick  as React.MouseEventHandler<HTMLButtonElement>)(e)
     }
   }
 
