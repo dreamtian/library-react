@@ -1,6 +1,6 @@
 {
-  "name": "soshime-library-one",
-  "version": "0.0.4",
+  "name": "tuia-fed",
+  "version": "0.0.1",
   "description": "Library of react components for Professional Services projects",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/sosohime/library-react"
+    "url": ""
   },
   "scripts": {
     "start": "styleguidist server",
@@ -21,7 +21,7 @@
     "dist": "node ./build/bin/test-tools.js run dist",
     "pre-pub": "node ./build/bin/test-tools.js run pub-build"
   },
-  "author": "sosohime",
+  "author": "tuia-fed",
   "license": "MIT",
   "standard": {
     "parser": "babel-eslint",
