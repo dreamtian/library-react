@@ -159,11 +159,11 @@ function compile(modules) {
 }
 
 function publish(tagString, done) {
-  let args = ['publish', '--with-antd-tools'];
+  let args = ['publish'];
   if (tagString) {
     args = args.concat(['--tag', tagString]);
   }
-  const publishNpm = process.env.PUBLISH_NPM_CLI || 'npm';
+  const publishNpm = 'npm';
   runCmd(publishNpm, args, (code) => {
     tag();
     done(code);

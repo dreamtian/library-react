@@ -160,7 +160,7 @@ module.exports = function (modules) {
       new webpack.BannerPlugin(`
 ${pkg.name} v${pkg.version}
 
-Copyright 2015-present, Alipay, Inc.
+Copyright 2018-present, Soshime.
 All rights reserved.
       `),
       new webpack.ProgressPlugin((percentage, msg, addInfo) => {

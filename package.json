@@ -1,8 +1,18 @@
 {
-  "name": "tuia",
-  "version": "1.0.0",
+  "name": "soshime-library-one",
+  "version": "0.0.2",
   "description": "Library of react components for Professional Services projects",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sosohime/library-react"
+  },
   "scripts": {
     "start": "styleguidist server",
     "test": "jest --no-cache --config .jest.js",
@@ -11,12 +21,16 @@
     "dist": "node ./build/bin/test-tools.js run dist",
     "pub": "node ./build/bin/test-tools.js run pub"
   },
-  "author": "tuia-FED",
+  "author": "sosohime",
   "license": "MIT",
   "standard": {
     "parser": "babel-eslint",
     "ignore": [
-      "__tests__"
+      "__tests__",
+      "lib",
+      "es",
+      "dist",
+      "build"
     ]
   },
   "husky": {
@@ -44,7 +58,8 @@
     "gulp-watch": "^4.3.10",
     "lodash": "^4.17.4",
     "merge2": "^1.2.2",
-    "snazzy": "^7.1.1"
+    "snazzy": "^7.1.1",
+    "ts-loader": "^3.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
@@ -75,5 +90,9 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "typescript": "^2.2.1"
-  }
+  },
+  "sideEffects": [
+    "es/**/style/*",
+    "lib/**/style/*"
+  ]
 }

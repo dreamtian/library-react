@@ -1,2 +1,2 @@
-export {default as button} from './buttons'
-export {default as testc} from './testc'
+export {default as Button} from './buttons'
+export {default as Testc} from './testc'
