@@ -1,12 +1,12 @@
 {
-  "name": "test-build-tools",
+  "name": "tuia-fed",
   "version": "0.0.1",
   "description": "tools for library-react",
   "keywords": [
     "react",
     "tools"
   ],
-  "author": "theziming@126.com",
+  "author": "tuia-fed",
   "license": "MIT",
   "bin": {
     "test-tools": "./bin/test-tools.js",
