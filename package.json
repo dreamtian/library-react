@@ -84,7 +84,7 @@
     "react-styleguidist": "^6.2.6",
     "standard": "^11.0.1",
     "typescript": "^2.9.2",
-    "webpack": "2.2.0"
+    "webpack": "3.6.0"
   },
   "peerDependencies": {
     "react": "^16.0.0",
