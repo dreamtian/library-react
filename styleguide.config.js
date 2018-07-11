@@ -1,11 +1,11 @@
 const path = require('path')
-const glob = require('glob')
+// const glob = require('glob')
 const camelCase = require('lodash/camelCase')
 const upperFirst = require('lodash/upperFirst')
 const { styles, theme } = require('./styleguide.styles')
 const { version } = require('./package.json')
 
-var componentStyles = glob.sync('source/components/**/index.less').map(file => path.resolve(__dirname, file))
+// var componentStyles = glob.sync('source/components/**/index.less').map(file => path.resolve(__dirname, file))
 
 module.exports = {
   title: `tuia ${version}`,
