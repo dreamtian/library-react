@@ -5,7 +5,7 @@
 这是一个例子
 
 ```
-<Button tag='button' onClick={() => console.log('clicked')}></Button>
+<Button tag='button' onClick={() => console.log('clicked')}><span>button</span></Button>
 
 ```
 
