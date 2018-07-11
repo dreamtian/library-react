@@ -28,7 +28,7 @@ module.exports = {
       content: 'source/components/readme.md'
     },
     {
-      name: 'General',
+      name: 'Basic',
       components: () => ([
         // add the component like this
         // it can read the md file and generate the corresponding document on the website
@@ -37,21 +37,22 @@ module.exports = {
       ])
     },
     {
-      name: 'Layout',
+      name: 'Form',
       components: () => ([
+        // TODO : Input, Radio, Checkbox, Switch, Table, Select, DataPicker, TimePicker, RegionPicker, Cascader, Upload, Form
 
       ])
     },
     {
       name: 'Navigation',
       components: () => ([
-
+        // TODO : Menu, Tabs, Breadcrumb, Pagenation
       ])
     },
     {
-      name: 'Data Entry',
+      name: 'View',
       components: () => ([
-
+        // TODO : Message, Notice, Modal, Tag, Tooltip, Poptip, Poptip, Spin
       ])
     },
     {

@@ -3,7 +3,7 @@
 
 <img src="https://yun.dui88.com/tuia/test/luckydog.jpeg" alt="" width="400">
 
-**Library of React Components for rofessional Services Projects**
+**Library of React Components for Professional Services Projects**
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 </div> 
@@ -32,6 +32,6 @@ We welcome all contributions. Please read our [CONTRIBUTING.md](https://github.c
 
 ## TODO
 
-* add unit testing ([@sosohime](https://github.com/sosohime))
-* add theme to facilitate the application of various styles (use for reference ant-design or element-ui)
+* add unit testing ([@sosohime](https://github.com/sosohime))(completed)
+* add theme to facilitate the application of various styles ([@sosohime](https://github.com/sosohime))
 
