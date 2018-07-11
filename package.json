@@ -1,6 +1,6 @@
 {
-  "name": "tuia-fed",
-  "version": "0.0.1",
+  "name": "soshime-library-one",
+  "version": "0.0.8",
   "description": "Library of react components for Professional Services projects",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -17,11 +17,12 @@
     "start": "styleguidist server",
     "test": "jest --no-cache --config .jest.js",
     "lint": "standard",
+    "initbuild": "cd ./build && npm install",
     "compile": "node ./build/bin/test-tools.js run compile",
     "dist": "node ./build/bin/test-tools.js run dist",
-    "pre-pub": "node ./build/bin/test-tools.js run pub-build"
+    "pre-pub": "npm run initbuild && node ./build/bin/test-tools.js run pub-build && node ./scripts/prepub"
   },
-  "author": "tuia-fed",
+  "author": "sosohime",
   "license": "MIT",
   "standard": {
     "parser": "babel-eslint",

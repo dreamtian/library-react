@@ -90,10 +90,10 @@ function babelify(js, modules) {
   let stream = js.pipe(babel(babelConfig))
     .pipe(through2.obj(function z(file, encoding, next) {
       this.push(file.clone());
-      if (file.path.match(/\/style\/index\.js/)) {
+      if (file.path.match(/\/style\/index\.js/) || file.path.match(/\\style\\index\.js/)) {
         const content = file.contents.toString(encoding);
         file.contents = Buffer.from(content
-          .replace(/\/style\/?'/g, '/style/css\'')
+          .replace(/\/style\/?'/g, '/style/css\'').replace(/\\style\\?'/g, '\style\css\'')
           .replace(/\.less/g, '.css'));
         file.path = file.path.replace(/index\.js/, 'css.js');
         this.push(file);
@@ -116,7 +116,7 @@ function compile(modules) {
   const less = gulp.src(['source/components/**/*.less'])
     .pipe(through2.obj(function (file, encoding, next) {
       this.push(file.clone());
-      if (file.path.match(/\/style\/index\.less$/)) {
+      if (file.path.match(/\/style\/index\.less$/) || file.path.match(/\\style\\index\.less$/)) {
         transformLess(file.path).then((css) => {
           file.contents = Buffer.from(css);
           file.path = file.path.replace(/\.less$/, '.css');
