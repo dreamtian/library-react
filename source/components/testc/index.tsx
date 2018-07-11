@@ -68,7 +68,7 @@ export default class Button extends React.Component<ButtonProps, any> {
     className: PropTypes.string,
     onClick: PropTypes.func,
     loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
-    icon: PropTypes.string,
+    icon: PropTypes.string
   }
 
   static defaultProps = {

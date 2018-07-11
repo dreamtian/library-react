@@ -1,48 +1,10 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends2 = require('babel-runtime/helpers/extends');
-
-var _extends3 = _interopRequireDefault(_extends2);
-
-var _defineProperty2 = require('babel-runtime/helpers/defineProperty');
-
-var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
-var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _createClass2 = require('babel-runtime/helpers/createClass');
-
-var _createClass3 = _interopRequireDefault(_createClass2);
-
-var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = require('babel-runtime/helpers/inherits');
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = require('prop-types');
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var __rest = undefined && undefined.__rest || function (s, e) {
+import _extends from 'babel-runtime/helpers/extends';
+import _defineProperty from 'babel-runtime/helpers/defineProperty';
+import _classCallCheck from 'babel-runtime/helpers/classCallCheck';
+import _createClass from 'babel-runtime/helpers/createClass';
+import _possibleConstructorReturn from 'babel-runtime/helpers/possibleConstructorReturn';
+import _inherits from 'babel-runtime/helpers/inherits';
+var __rest = this && this.__rest || function (s, e) {
     var t = {};
     for (var p in s) {
         if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
@@ -50,7 +12,9 @@ var __rest = undefined && undefined.__rest || function (s, e) {
         if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
     }return t;
 };
-
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 var rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/;
 var isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar);
 function isString(str) {
@@ -65,13 +29,13 @@ function insertSpace(child, needInserted) {
     var SPACE = needInserted ? ' ' : '';
     // strictNullChecks oops.
     if (typeof child !== 'string' && typeof child !== 'number' && isString(child.type) && isTwoCNChar(child.props.children)) {
-        return _react2['default'].cloneElement(child, {}, child.props.children.split('').join(SPACE));
+        return React.cloneElement(child, {}, child.props.children.split('').join(SPACE));
     }
     if (typeof child === 'string') {
         if (isTwoCNChar(child)) {
             child = child.split('').join(SPACE);
         }
-        return _react2['default'].createElement(
+        return React.createElement(
             'span',
             null,
             child
@@ -81,12 +45,12 @@ function insertSpace(child, needInserted) {
 }
 
 var Button = function (_React$Component) {
-    (0, _inherits3['default'])(Button, _React$Component);
+    _inherits(Button, _React$Component);
 
     function Button(props) {
-        (0, _classCallCheck3['default'])(this, Button);
+        _classCallCheck(this, Button);
 
-        var _this = (0, _possibleConstructorReturn3['default'])(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).call(this, props));
 
         _this.handleClick = function (e) {
             // Add click effect
@@ -107,12 +71,12 @@ var Button = function (_React$Component) {
         return _this;
     }
 
-    (0, _createClass3['default'])(Button, [{
+    _createClass(Button, [{
         key: 'isNeedInserted',
         value: function isNeedInserted() {
             var children = this.props.children;
 
-            return _react2['default'].Children.count(children) === 1;
+            return React.Children.count(children) === 1;
         }
     }, {
         key: 'render',
@@ -126,34 +90,35 @@ var Button = function (_React$Component) {
                 nbButton = _a.nbButton,
                 children = _a.children,
                 others = __rest(_a, ["text", "className", "prefixCls", "nbButton", "children"]);
-            var classes = (0, _classnames2['default'])(prefixCls, className, (0, _defineProperty3['default'])({}, prefixCls + '-nbButton', nbButton));
-            var kids = children || children === 0 ? _react2['default'].Children.map(children, function (child) {
+            var classes = classNames(prefixCls, className, _defineProperty({}, prefixCls + '-nbButton', nbButton));
+            var kids = children || children === 0 ? React.Children.map(children, function (child) {
                 return insertSpace(child, _this2.isNeedInserted());
             }) : null;
-            return _react2['default'].createElement(
+            return React.createElement(
                 'button',
-                (0, _extends3['default'])({ className: classes, onClick: this.handleClick }, others),
+                _extends({ className: classes, onClick: this.handleClick }, others),
                 kids
             );
         }
     }]);
+
     return Button;
-}(_react2['default'].Component);
+}(React.Component);
 
-exports['default'] = Button;
+export default Button;
 
+Button.propTypes = {
+    type: PropTypes.oneOf(['common', 'uncommon']),
+    size: PropTypes.oneOf(['common', 'small', 'large']),
+    className: PropTypes.string,
+    onClick: PropTypes.func,
+    loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
+    icon: PropTypes.string
+};
 Button.defaultProps = {
     prefixCls: 'test-btn',
     nbButton: false,
     disabled: false,
     type: 'common',
     size: 'common'
-};
-Button.propTypes = {
-    type: _propTypes2['default'].oneOf(['common', 'uncommon']),
-    size: _propTypes2['default'].oneOf(['common', 'small', 'large']),
-    className: _propTypes2['default'].string,
-    onClick: _propTypes2['default'].func,
-    loading: _propTypes2['default'].oneOfType([_propTypes2['default'].bool, _propTypes2['default'].object]),
-    icon: _propTypes2['default'].string
 };

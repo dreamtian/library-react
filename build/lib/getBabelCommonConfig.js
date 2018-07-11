@@ -11,6 +11,7 @@ module.exports = function (modules) {
   plugins.push([require.resolve('babel-plugin-transform-runtime'), {
     polyfill: false,
   }]);
+  
   return {
     presets: [
       require.resolve('babel-preset-react'),

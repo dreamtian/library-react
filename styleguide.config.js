@@ -68,14 +68,32 @@ module.exports = {
         {
           test: /\.jsx?$/,
           exclude: /node_modules/,
-          loader: 'babel-loader'
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: [
+                  'latest',
+                  'stage-0',
+                  'react'
+                ]
+              }
+            }
+          ]
         },
         {
           test: /\.tsx?$/,
           exclude: /node_modules/,
           use: [
             {
-              loader: 'babel-loader'
+              loader: 'babel-loader',
+              options: {
+                presets: [
+                  'latest',
+                  'stage-0',
+                  'react'
+                ]
+              }
             },
             {
               loader: 'ts-loader',
