@@ -1,19 +1,36 @@
 {
-  "name": "tuia",
-  "version": "1.0.0",
+  "name": "tuia-fed",
+  "version": "0.0.1",
   "description": "Library of react components for Professional Services projects",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "scripts": {
     "start": "styleguidist server",
     "test": "jest --no-cache --config .jest.js",
-    "lint": "standard"
+    "lint": "standard",
+    "compile": "node ./build/bin/test-tools.js run compile",
+    "dist": "node ./build/bin/test-tools.js run dist",
+    "pre-pub": "node ./build/bin/test-tools.js run pub-build"
   },
-  "author": "tuia-FED",
+  "author": "tuia-fed",
   "license": "MIT",
   "standard": {
     "parser": "babel-eslint",
     "ignore": [
-      "__tests__"
+      "__tests__",
+      "lib",
+      "es",
+      "dist",
+      "build"
     ]
   },
   "husky": {
@@ -22,15 +39,26 @@
     }
   },
   "dependencies": {
+    "@types/classnames": "^2.2.4",
+    "@types/prop-types": "^15.5.3",
+    "@types/react": "^16.4.6",
     "babel-eslint": "^8.2.3",
     "classnames": "^2.2.5",
+    "colorful": "^2.1.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-strip-code": "^0.1.4",
+    "gulp-typescript": "^3.1.6",
+    "gulp-watch": "^4.3.10",
     "lodash": "^4.17.4",
-    "snazzy": "^7.1.1"
+    "merge2": "^1.2.2",
+    "snazzy": "^7.1.1",
+    "ts-loader": "^3.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
@@ -45,16 +73,25 @@
     "enzyme-to-json": "^3.3.4",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.9.1",
-    "jest": "^23.1.0",
     "husky": "^1.0.0-rc.8",
+    "jest": "^23.1.0",
+    "less": "^3.5.3",
+    "less-loader": "^4.1.0",
+    "postcss-loader": "^2.1.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-styleguidist": "^6.2.6",
     "standard": "^11.0.1",
+    "typescript": "^2.9.2",
     "webpack": "2.2.0"
   },
   "peerDependencies": {
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
-  }
+    "react-dom": "^16.0.0",
+    "typescript": "^2.2.1"
+  },
+  "sideEffects": [
+    "es/**/style/*",
+    "lib/**/style/*"
+  ]
 }
