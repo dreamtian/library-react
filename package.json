@@ -14,13 +14,15 @@
     "url": ""
   },
   "scripts": {
+    "prestart": "node ./scripts/prestart",
     "start": "styleguidist server",
     "test": "jest --no-cache --config .jest.js",
     "lint": "standard",
     "initbuild": "cd ./build && npm install",
+    "clearDev": "node ./scripts/clearDevLess",
     "compile": "node ./build/bin/test-tools.js run compile",
     "dist": "node ./build/bin/test-tools.js run dist",
-    "pre-pub": "npm run initbuild && node ./build/bin/test-tools.js run pub-build && node ./scripts/prepub"
+    "pre-pub": "npm run clearDev && npm run initbuild && node ./build/bin/test-tools.js run pub-build && node ./scripts/prepub"
   },
   "author": "sosohime",
   "license": "MIT",
