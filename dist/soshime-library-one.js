@@ -1,6 +1,6 @@
 /*!
  * 
- * soshime-library-one v0.0.8
+ * soshime-library-one v0.0.9
  * 
  * Copyright 2018-present, Soshime.
  * All rights reserved.

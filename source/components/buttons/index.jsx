@@ -1,6 +1,3 @@
-/** Dont edit this block, it's auto produce [[ **/
-import './style'
-/** auto produce block end ]] **/
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'

@@ -1,6 +1,6 @@
 /*!
  * 
- * soshime-library-one v0.0.8
+ * soshime-library-one v0.0.9
  * 
  * Copyright 2018-present, Soshime.
  * All rights reserved.
@@ -11,7 +11,7 @@
   height: 50px;
   text-align: center;
   line-height: 50px;
-  background-color: #000;
+  background-color: #85728a;
   color: red;
   cursor: pointer;
 }

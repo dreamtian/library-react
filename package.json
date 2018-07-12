@@ -1,6 +1,6 @@
 {
   "name": "soshime-library-one",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Library of react components for Professional Services projects",
   "main": "lib/index.js",
   "module": "es/index.js",
