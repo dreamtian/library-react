@@ -1,8 +1,11 @@
 const path = require('path')
+// const glob = require('glob')
 const camelCase = require('lodash/camelCase')
 const upperFirst = require('lodash/upperFirst')
 const { styles, theme } = require('./styleguide.styles')
 const { version } = require('./package.json')
+
+// var componentStyles = glob.sync('source/components/**/index.less').map(file => path.resolve(__dirname, file))
 
 module.exports = {
   title: `tuia ${version}`,
@@ -12,6 +15,8 @@ module.exports = {
   showUsage: true,
   styles,
   theme,
+  require: [
+  ],
   getComponentPathLine: (componentPath) => {
     const dirname = path.dirname(componentPath, '.js')
     const name = dirname.split('/').slice(-1)[0]
@@ -32,8 +37,7 @@ module.exports = {
       components: () => ([
         // add the component like this
         // it can read the md file and generate the corresponding document on the website
-        path.resolve(__dirname, 'source/components/buttons', 'index.jsx'),
-        path.resolve(__dirname, 'source/components/testc', 'index.tsx')
+        path.resolve(__dirname, 'source/components/button', 'index.jsx')
       ])
     },
     {
@@ -106,6 +110,10 @@ module.exports = {
         {
           test: /\.css$/,
           loader: ['style-loader', 'css-loader']
+        },
+        {
+          test: /\.less$/,
+          loader: ['style-loader', 'css-loader', 'less-loader']
         }
       ]
     }
