@@ -1,6 +1,6 @@
 /*!
  * 
- * soshime-library-one v0.0.9
+ * soshime-library-one v0.0.10
  * 
  * Copyright 2018-present, Soshime.
  * All rights reserved.
@@ -1009,7 +1009,7 @@ module.exports = __webpack_require__(53);
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./buttons/style/index.jsx": 50,
+	"./button/style/index.jsx": 50,
 	"./version/style/index.jsx": 52
 };
 function webpackContext(req) {
@@ -1064,8 +1064,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__buttons__ = __webpack_require__(54);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return __WEBPACK_IMPORTED_MODULE_0__buttons__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__button__ = __webpack_require__(54);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return __WEBPACK_IMPORTED_MODULE_0__button__["a"]; });
 
 
 /***/ }),

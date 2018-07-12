@@ -37,7 +37,7 @@ module.exports = {
       components: () => ([
         // add the component like this
         // it can read the md file and generate the corresponding document on the website
-        path.resolve(__dirname, 'source/components/buttons', 'index.jsx')
+        path.resolve(__dirname, 'source/components/button', 'index.jsx')
       ])
     },
     {
