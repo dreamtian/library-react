@@ -17,7 +17,7 @@
     "prestart": "node ./scripts/prestart",
     "start": "styleguidist server",
     "test": "jest --no-cache --config .jest.js",
-    "lint": "standard",
+    "eslint": "eslint --ext .jsx,.js source",
     "initbuild": "cd ./build && npm install",
     "clearDev": "node ./scripts/clearDevLess",
     "compile": "node ./build/bin/test-tools.js run compile",
@@ -38,7 +38,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run eslint"
     }
   },
   "dependencies": {
