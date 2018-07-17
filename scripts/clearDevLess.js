@@ -24,8 +24,7 @@ fs.readdir(componentsPath, function (err, files) {
           fs.writeFile(fullPath, removeLess, 'utf8', err => {
             if (err) return console.log(err)
           })
-        }
-        if (data.match(strings.existLess)){
+        } else if (data.match(strings.existLess)){
           console.log('there have some style file imported in component js file \n please check it:'.red.bgYellow)
           console.log(fullPath.cyan)
           console.log('\n')
