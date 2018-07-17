@@ -56,7 +56,7 @@ module.exports = {
     {
       name: 'View',
       components: () => ([
-        // TODO : Message, Notice, Modal, Tag, Tooltip, Poptip, Poptip, Spin
+        // TODO : Message, Notice, Modal, Tag, Tooltip, Popover, Spin
       ])
     },
     {
