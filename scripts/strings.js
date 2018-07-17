@@ -9,7 +9,9 @@ const autoLoadLessString =
   +
   `\/\*\* auto produce block end ]] \*\*\/${linebreak}`
 
+const existLess = '\'\./style\''
 module.exports = {
   linebreak,
-  autoLoadLessString
+  autoLoadLessString,
+  existLess
 }

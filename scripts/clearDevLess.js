@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const strings = require('./strings');
+const colors = require('colors')
 
 // remove auto loaded less
 const componentsPath = path.join(process.cwd(), '/source/components');
@@ -23,6 +24,13 @@ fs.readdir(componentsPath, function (err, files) {
           fs.writeFile(fullPath, removeLess, 'utf8', err => {
             if (err) return console.log(err)
           })
+        }
+        if (data.match(strings.existLess)){
+          console.log('there have some style file imported in component js file \n please check it:'.red.bgYellow)
+          console.log(fullPath.cyan)
+          console.log('\n')
+
+          throw new Error('don\'t import style in components')
         }
       });
     }
