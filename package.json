@@ -1,5 +1,5 @@
 {
-  "name": "soshime-library-one",
+  "name": "tuia-design",
   "version": "0.0.10",
   "description": "Library of react components for Professional Services projects",
   "main": "lib/index.js",
@@ -16,7 +16,7 @@
   "scripts": {
     "start": "node ./scripts/prestart && styleguidist server",
     "test": "jest --no-cache --config .jest.js",
-    "lint": "standard",
+    "eslint": "eslint --ext .jsx,.js source",
     "initbuild": "cd ./build && npm install",
     "clearDev": "node ./scripts/clearDevLess",
     "compile": "node ./build/bin/test-tools.js run compile",
@@ -37,7 +37,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run eslint"
     }
   },
   "dependencies": {
